@@ -1,11 +1,12 @@
-let numero = Number(prompt('Digite um número'));
+const numero = Number(prompt('Digite um número'));
 // ou fazer numero = Number(numero) sem o number acima.
 const numeroTitulo = document.getElementById('numero-titulo');
 const texto = document.getElementById('texto');
 
-
 numeroTitulo.innerHTML = numero;
-texto.innerHTML = `<p>A raiz quadrada do seu número é: ${numero ** 0.5}</p></br>`;
+
+texto.innerHTML = '';
+texto.innerHTML += `<p>A raiz quadrada do seu número é: ${numero ** 0.5}</p></br>`;
 texto.innerHTML += `<p>${numero} é inteiro: ${Number.isInteger(numero)}</p></br>`;
 texto.innerHTML += `<p>É NaN: ${Number.isNaN(numero)}</p></br>`;
 texto.innerHTML += `<p>Arredondando para baixo: ${Math.floor(numero)}</p></br>`;
