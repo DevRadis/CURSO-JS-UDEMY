@@ -1,40 +1,19 @@
-
-/*
-const h1 = document.querySelector('.container');
-
-
 const elementos = [
-  {tag: 'p', texto: 'Frase 1'},
-  {tag: 'div', texto: 'Frase 2'},
-  {tag: 'footer', texto: 'Frase 3'},
-  {tag: 'section', texto: 'Frase 4'},
+  {tag: 'p', texto: 'Paulo será um ótimo programador.'},
+  {tag: 'div', texto: 'Ele tem apenas 31 anos e já está com muita moral.'},
+  {tag: 'section', texto: 'Começou a programar tem pouco tempo e já está aprendendo JavaScript.'},
+  {tag: 'footer', texto: 'Ele estuda e trabalha muito, tem o apoio total de sua esposa.'}
 ];
 
-function criaP() {
-  const p = document.createElement('p');
-  return p;
+const container = document.querySelector('.container'); // selecionando o container do HTML.
+const div = document.createElement('div'); // aqui estamos criando uma DIV que será usada depois.
+
+
+for (let i = 0; i < elementos.length; i++) { // aqui estou desestruturando o objeto que está dentro do array.
+  let {tag, texto} = elementos[i]; // estou colocando a tag e o texto dentro do elemento I.
+  let criaTag = document.createElement(tag); // Estou criando o elemento TAG dentro da variavel criaTag.
+  criaTag.innerText = texto; // aqui estou informando que a criaTag receberá o valor de texto.
+  div.appendChild(criaTag); // aqui estou criando um filho (DIV) que terá o criaTag dentro dela.
 }
 
-function criaDiv() {
-  const div = document.createElement('div');
-  return div;
-}
-
-function criaFooter() {
-  const footer = document.createElement('footer');
-  return footer;
-}
-
-function criaSection() {
-  const section = document.createElement('section');
-  return section;
-}
-
-const p = criaP();
-const div = criaDiv();
-const footer = criaFooter();
-const section = criaSection();
-
-p.innerHTML = p
-p.appendChild(p);
-*/
+container.appendChild(div); // aqui estou finalizando e colocando a div dentro do meu HTML dentro da class container...
